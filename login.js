@@ -1,6 +1,5 @@
-// console.log('Script Connected');
 
-//login button functionality
+//for log in button
 document.getElementById('login')
     .addEventListener('click', function (event) {
         event.preventDefault();
@@ -10,12 +9,13 @@ document.getElementById('login')
         let pin = document.getElementById('pin').value;
         const num = parseInt(number);
         const pi = parseInt(pin);
-        //   console.log(pin,number);
+
         if (pi === pinNumber && num === phoneNumber) {
             console.log('logged in');
- window.location.href="homePage.html";
+            window.location.href = "homePage.html";
         }
         else {
-           alert('invalid number and pin number')
+            alert('invalid number and pin number')
         }
     });
+    

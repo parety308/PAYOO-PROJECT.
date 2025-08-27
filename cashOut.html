@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Cash Out Page</title>
     <!--font awesome cdn-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN
++OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Tailwind cdn &daisyUI cdn-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-
 <body class=" bg-[#F4F5F7] flex flex-col justify-center items-center  ">
     <main class="bg-[#FFFFFF] rounded-xl">
         <section class="flex justify-between items-center  min-h[100px] w-xl p-4 ">
@@ -68,40 +67,31 @@
             </div>
         </section>
     </main>
-
-    <section class=" w-xl">
-        <h1 class="text-xl m-2 ">Add Money</h1>
-        <form action="" class="bg-[#FFFFFF] p-4 rounded-lg">
-            <div class="mb-2 flex flex-col gap-2 text-[18px]">
-                <h3>Select A Bank</h3>
-                <select class="select bg-[#F4F5F7] w-full rounded-xl">
-                    <option disabled selected>Select Bank</option>
-                    <option>Islami Bank</option>
-                    <option>DBBL</option>
-                    <option>Sonali Bank</option>
-                </select>
-            </div>
-            <div class=" mb-2 flex flex-col gap-2 text-[18px]">
-                <h3>Bank Account Number</h3>
-                <input id="accountNumber" type="text" class="bg-[#F4F5F7] border-none rounded-xl  text-black p-2"
-                    placeholder="Enter 11 digit account number">
-            </div>
-            <div class=" mb-2 flex flex-col gap-2 text-[18px] ">
-                <h3>Amount to Add</h3>
-                <input id="addMoney" type="text" class="bg-[#F4F5F7] border-none rounded-xl p-2" placeholder="Enter Your Amount">
-            </div>
-            <div class=" mb-2 flex flex-col gap-2 text-[18px]">
-
-                <h3>Pin Number</h3>
-                <input id="pinNumber" type="password" class=" bg-[#F4F5F7] border-none rounded-xl p-2" placeholder="Enter Your Pin">
-            </div>
-            <div>
-                <button id="addMoneyBtn" class=" btn bg-[#0874F2] text-[#FFFFFF] w-full rounded-xl text-xl mt-1">Add Money</button>
-            </div>
-        </form>
-    </section>
-
-    <script src="addMoney.js"></script>
+    
+     <section class=" w-xl">
+     <h1 class="text-xl m-2 ">Cash Out</h1>
+     <form action="" class="bg-[#FFFFFF] p-4 rounded-lg">
+         <div class=" mb-2 flex flex-col gap-2 text-[18px]">
+             <h3>Agent Number</h3>
+             <input id="agentNumber" type="text" class="bg-[#F4F5F7] border-none rounded-xl  text-black p-2"
+                 placeholder="Enter 11 digit  number">
+         </div>
+         <div class=" mb-2 flex flex-col gap-2 text-[18px] ">
+             <h3>Amount</h3>
+             <input id="cashoutMoney" type="text" class="bg-[#F4F5F7] border-none rounded-xl p-2" 
+placeholder="Enter Amoun To Withdraw ">
+         </div>
+         <div class=" mb-2 flex flex-col gap-2 text-[18px]">
+             <h3>Pin Number</h3>
+             <input id="pinNumber" type="password" class=" bg-[#F4F5F7] border-none rounded-xl p-2" placeholder="Enter Your 
+Pin">
+         </div>
+         <div>
+             <button id="cashOutBtn" class=" btn bg-[#0874F2] text-[#FFFFFF] w-full rounded-xl text-xl 
+mt-1">Withdraw Money</button>
+         </div>
+     </form>
+ </section>
+ <script src="cashOut.js"></script>
 </body>
-
 </html>

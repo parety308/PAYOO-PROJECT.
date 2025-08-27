@@ -5,6 +5,18 @@ document.getElementById('addMoneyBtn').addEventListener('click', function (event
     let money = document.getElementById('totalMoney');
     const addMoney = document.getElementById('addMoney');
 
+    const accountNumber = document.getElementById('accountNumber').value;
+    let pinNumber = document.getElementById('pinNumber');
+    pinNumber = parseInt(pinNumber.value);
+    if (accountNumber.length != 10) {
+        alert('Invalid Account Number');
+        return;
+    }
+
+    if (pinNumber != 2205) {
+        alert('Invalid Pin');
+    }
+
     //convert
     const addedMoney = parseInt(addMoney.value);
     let totalM = parseInt(money.innerText);

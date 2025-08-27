@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!--font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Tailwind cdn &daisyUI cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class=" bg-[#F4F5F7]  flex flex-col justify-center items-center  ">
+    <main class="bg-[#FFFFFF] rounded-xl">
+        <section class="flex justify-between items-center  min-h[100px] w-xl p-4 ">
+            <div class="flex">
+                <div class=" mb-2 flex flex-col gap-2 text-[18px]">
+                    <img src="images/Group.png" alt="">
+                </div>
+                <div class="flex flex-col justify-center ml-3">
+                    <h2 class="font-bold text-2xl">$ <span id="totalMoney">45000</span></h2>
+                    <h3 class="text-[#08080880]">Avaiable Balance</h3>
+                </div>
+            </div>
+            <div class="">
+
+                <button class="btn text-[#08080880]"><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>log
+                    out</button>
+            </div>
+        </section>
+        <section class="mt-[30px]  w-xl p-4 ">
+            <h1 class="text-3xl font-semibold mb-2 ">🔥 Welcome to Payooo!</h1>
+            <h3>Enjoy easy and convenient financial services with us. <br> Cashout charge is low and </h3>
+        </section>
+        <section class="mt-[30px]  w-xl p-4 grid grid-cols-3 gap-4 ">
+            <div id="Add-Button"
+                class=" bg-[#FFFFFF] border border-gray-200 rounded-xl flex flex-col justify-center items-center h-[90px] w-[150px] shadow-md gap-1">
+                <img src="images/wallet1.png" alt="">
+                <h3>Add Money</h3>
+            </div>
+            <div id="Cash-Button"
+                class=" bg-[#FFFFFF] border border-gray-200 rounded-xl flex flex-col justify-center items-center h-[90px] w-[150px] shadow-md gap-1">
+                <img src="images/send1.png" alt="">
+                <h3>Cashout</h3>
+            </div>
+            <div id="Transfer-Button"
+                class=" bg-[#FFFFFF] border border-gray-200 rounded-xl flex flex-col justify-center items-center h-[90px] w-[150px] shadow-md gap-1">
+                <img src="images/money1.png" alt="">
+                <h3>Transfer Money</h3>
+            </div>
+            <div id="Bonus-Button"
+                class=" bg-[#FFFFFF] border border-gray-200 rounded-xl flex flex-col justify-center items-center h-[90px] w-[150px] shadow-md gap-1">
+                <img src="images/bonus1.png" alt="">
+                <h3>Get Bonus</h3>
+            </div>
+            <div id="Pay-Button"
+                class=" bg-[#FFFFFF] border border-gray-200 rounded-xl flex flex-col justify-center items-center h-[90px] w-[150px] shadow-md gap-1">
+                <img src="images/purse1.png" alt="">
+                <h3>Pay Bill</h3>
+            </div>
+            <div id="Transaction-Button"
+                class=" bg-[#FFFFFF] border border-gray-200  flex flex-col justify-center items-center h-[90px] w-[150px] shadow-lg">
+                <img src="images/transaction1.png" alt="">
+                <h3>Transactions</h3>
+            </div>
+        </section>
+    </main>
+
+    <!--Add Money Section-->
+    <section id="Add-Feature" class=" w-xl hidden">
+        <h1 class="text-xl m-2 ">Add Money</h1>
+        <form action="" class="bg-[#FFFFFF] p-4 rounded-lg">
+            <div class="mb-2 flex flex-col gap-2 text-[18px]">
+                <h3>Select A Bank</h3>
+                <select class="select bg-[#F4F5F7] w-full rounded-xl">
+                    <option disabled selected>Select Bank</option>
+                    <option>Islami Bank</option>
+                    <option>DBBL</option>
+                    <option>Sonali Bank</option>
+                </select>
+            </div>
+            <div class=" mb-2 flex flex-col gap-2 text-[18px]">
+                <h3>Bank Account Number</h3>
+                <input id="accountNumber" type="text" class="bg-[#F4F5F7] border-none rounded-xl  text-black p-2"
+                    placeholder="Enter 11 digit account number">
+            </div>
+            <div class=" mb-2 flex flex-col gap-2 text-[18px] ">
+                <h3>Amount to Add</h3>
+                <input id="addMoney" type="text" class="bg-[#F4F5F7] border-none rounded-xl p-2"
+                    placeholder="Enter Your Amount">
+            </div>
+            <div class=" mb-2 flex flex-col gap-2 text-[18px]">
+
+                <h3>Pin Number</h3>
+                <input id="pinNumber" type="password" class=" bg-[#F4F5F7] border-none rounded-xl p-2"
+                    placeholder="Enter Your Pin">
+            </div>
+            <div>
+                <button id="addMoneyBtn" class=" btn bg-[#0874F2] text-[#FFFFFF] w-full rounded-xl text-xl mt-1">Add
+                    Money</button>
+            </div>
+        </form>
+    </section>
+
+    <!--Cashout Section-->
+    <section id="Cash-Feature" class=" w-xl hidden">
+        <h1 class="text-xl m-2 ">Cash Out</h1>
+        <form action="" class="bg-[#FFFFFF] p-4 rounded-lg">
+            <div class=" mb-2 flex flex-col gap-2 text-[18px]">
+                <h3>Agent Number</h3>
+                <input id="agentNumber" type="text" class="bg-[#F4F5F7] border-none rounded-xl  text-black p-2"
+                    placeholder="Enter 11 digit  number">
+            </div>
+            <div class=" mb-2 flex flex-col gap-2 text-[18px] ">
+                <h3>Amount</h3>
+                <input id="cashoutMoney" type="text" class="bg-[#F4F5F7] border-none rounded-xl p-2"
+                    placeholder="Enter Amoun To Withdraw ">
+            </div>
+            <div class=" mb-2 flex flex-col gap-2 text-[18px]">
+                <h3>Pin Number</h3>
+                <input id="pinNumber" type="password" class=" bg-[#F4F5F7] border-none rounded-xl p-2" placeholder="Enter Your 
+Pin">
+            </div>
+            <div>
+                <button id="cashOutBtn" class=" btn bg-[#0874F2] text-[#FFFFFF] w-full rounded-xl text-xl 
+mt-1">Withdraw Money</button>
+            </div>
+        </form>
+    </section>
+
+    <!--Pay Bill Section-->
+    <section id="Pay-Feature" class=" w-xl hidden ">
+        <h1 class="text-xl m-2 ">Pay Bill</h1>
+        <form action="" class="bg-[#FFFFFF] p-4 rounded-lg">
+            <div class="mb-2 flex flex-col gap-2 text-[18px]">
+                <h3>Select To Pay</h3>
+                <select class="select bg-[#F4F5F7] w-full rounded-xl">
+                    <option disabled selected>Gas</option>
+                    <option>Water</option>
+                    <option>Electricity</option>
+                    <option>BroadBand</option>
+                </select>
+            </div>
+            <div class=" mb-2 flex flex-col gap-2 text-[18px]">
+                <h3>Biller Account Number</h3>
+                <input id="accountNumber" type="text" class="bg-[#F4F5F7] border-none rounded-xl  text-black p-2"
+                    placeholder="Enter 11 digit account number">
+            </div>
+            <div class=" mb-2 flex flex-col gap-2 text-[18px] ">
+                <h3>Amount to Pay</h3>
+                <input id="payMoney" type="text" class="bg-[#F4F5F7] border-none rounded-xl p-2"
+                    placeholder="Add Amount to Pay">
+            </div>
+            <div class=" mb-2 flex flex-col gap-2 text-[18px]">
+                <h3>Pin Number</h3>
+                <input id="pinNumber" type="password" class=" bg-[#F4F5F7] border-none rounded-xl p-2"
+                    placeholder="Enter Your Pin">
+            </div>
+            <div>
+                <button id="payBillBtn" class=" btn bg-[#0874F2] text-[#FFFFFF] w-full rounded-xl text-xl mt-1">Pay
+                    Now</button>
+            </div>
+        </form>
+    </section>
+
+    <!--Bonus Section-->
+    <section id="Bonus-Feature" class=" w-xl hidden ">
+        <h1 class="text-xl m-2 ">Get Bonus</h1>
+        <form class="bg-[#FFFFFF] p-4 rounded-lg">
+            <h3>Bonus Cupon</h3>
+            <input id="cupon" type="password" class=" bg-[#F4F5F7] border-none rounded-xl p-2 w-full mt-1"
+                placeholder="Enter Cupon ">
+            </div>
+            <div>
+                <button id="bonusBtn" class=" btn bg-[#0874F2] text-[#FFFFFF] w-full rounded-xl text-xl mt-2">Get
+                    Bonus</button>
+            </div>
+        </form>
+    </section>
+
+    <!--Transfer Money-->
+    <section id="Transfer-Feature" class=" w-xl Transfer-Feature hidden">
+        <h1 class="text-xl m-2 ">Transfer Money</h1>
+        <form action="" class="bg-[#FFFFFF] p-4 rounded-lg">
+            <div class=" mb-2 flex flex-col gap-2 text-[18px]">
+                <h3>User Account Number</h3>
+                <input id="accountNumber" type="text" class="bg-[#F4F5F7] border-none rounded-xl  text-black p-2"
+                    placeholder="Enter 11 digit  number">
+            </div>
+            <div class=" mb-2 flex flex-col gap-2 text-[18px] ">
+                <h3>Amount</h3>
+                <input id="transferMoney" type="text" class="bg-[#F4F5F7] border-none rounded-xl p-2"
+                    placeholder="Enter Amoun To Transfer ">
+            </div>
+            <div class=" mb-2 flex flex-col gap-2 text-[18px]">
+                <h3>Pin Number</h3>
+                <input id="pinNumber" type="password" class=" bg-[#F4F5F7] border-none rounded-xl p-2"
+                    placeholder="Enter Your Pin">
+            </div>
+            <div>
+                <button id="transferBtn" class=" btn bg-[#0874F2] text-[#FFFFFF] w-full rounded-xl text-xl mt-1">Send
+                    Now</button>
+            </div>
+        </form>
+    </section>
+    <script src="payooProjectPart_1_Full.js"></script>
+</body>
+
+</html>
